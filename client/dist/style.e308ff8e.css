@@ -1,0 +1,249 @@
+.body {
+  font-family: "Redressed", cursive;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  background: url("https://i.pinimg.com/736x/bd/36/30/bd3630c82495f90be1abb6c3b4995bda.jpg")
+    0 0 / cover no-repeat;
+}
+.blockPicture {
+  flex: 0 0 30%;
+  cursor: pointer;
+  width: 350px;
+  height: 350px;
+  transition: all 0.3s ease 0s;
+  margin: 0px 0px 50px 0px;
+}
+.blockPicture span {
+  text-align: left;
+  font-size: 18px;
+  color: black;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  transition: all 0.5s ease 0s;
+}
+.blockPicture:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
+}
+.blockPicture:hover span {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.blockPicture img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  overflow-y: auto;
+  justify-content: space-around;
+  margin: 0px;
+  margin-right: -50%;
+  width: 80%;
+  border-radius: 20px;
+  background-color: rgb(38, 167, 228, 0.6);
+}
+
+.topbar {
+  padding: 10px 20px;
+  transition: all 0.3s ease 0s;
+  transform: translate(0%, -70%);
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #343dd9;
+}
+.menu {
+  transition: all 0.3s ease 0s;
+  color: white;
+  font-size: 20px;
+  margin: 0px 0px 0px 0px;
+  align-self: flex-end;
+}
+.topbar:hover .menu {
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.file {
+  display: none;
+}
+.activeRemoved {
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+}
+.modalFiles.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease 0s;
+}
+.closeModal {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  transform: rotate(45deg);
+  top: 0px;
+  right: 10px;
+  font-size: 40px;
+  color: white;
+}
+.notPicture {
+  font-size: 25px;
+  color: white;
+}
+.modalFiles {
+  transition: all 0.3s ease 0s;
+  padding: 45px 0px 0px 0px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  left: 50%;
+  border-radius: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 400px;
+}
+.Error{
+  color:red;
+  font-size: 35px;
+  margin:50px 0px 0px 0px;
+}
+.Succes-modal{
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+  color:white;
+  font-size: 25px;
+}
+.Error-modal{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color:red;
+  font-size: 25px;
+}
+.block-picture {
+  flex: 0 0 28%;
+  height: 200px;
+  margin: 10px 0;
+  position: relative;
+}
+.block-picture:hover .image-card {
+  opacity: 0.5;
+}
+.block-picture:hover .remove-card {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  visibility: visible;
+}
+.largeImage {
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.largeImage img{
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+.largeImage span{
+  position: absolute;
+  top: -45px;
+  color:white;
+  right: -25px;
+  font-size: 65px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.block-picture:hover .name-picture {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  visibility: visible;
+}
+
+.image-card {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.remove-card {
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  right: 6px;
+  color: white;
+  font-size: 35px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.name-picture {
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+
+  font-family: serif;
+  position: absolute;
+  font-size: 25px;
+  max-width: 220px;
+  overflow-wrap: break-word;
+  color: white;
+  bottom: 5px;
+  left: 5px;
+}
+.listFiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.topbar:hover {
+  transform: translate(0, 0);
+  align-items: center;
+  height: 10vh;
+  transition: all 0.3s ease 0s;
+}
+.download.upload {
+  background-color: orange;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.download {
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #3add8e;
+  padding: 0px 15px 0px;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
